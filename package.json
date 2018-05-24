@@ -1,0 +1,36 @@
+{
+  "name": "create-next-example-app",
+  "scripts": {
+    "dev": "nodemon server/index.ts",
+    "build": "next build && tsc --project tsconfig.server.json",
+    "start": "cross-env NODE_ENV=production node production-server/index.js",
+    "analyze": "cross-env ANALYZE=1 next build"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^0.2.0",
+    "@zeit/next-typescript": "0.1.1",
+    "antd": "^3.5.3",
+    "express": "^4.16.3",
+    "next": "6.0.3",
+    "nprogress": "^0.2.0",
+    "react": "16.4.0",
+    "react-dom": "16.4.0",
+    "styled-jsx": "^2.2.6",
+    "typescript": "^2.7.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/next": "^2.4.7",
+    "@types/nprogress": "^0.0.29",
+    "@types/react": "^16.0.36",
+    "@types/styled-jsx": "^2.2.3",
+    "@zeit/next-less": "^0.3.0",
+    "babel-plugin-import": "^1.7.0",
+    "cross-env": "^5.1.6",
+    "less": "^3.0.4",
+    "nodemon": "^1.12.1",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.10.0",
+    "webpack-bundle-analyzer": "^2.13.1"
+  }
+}

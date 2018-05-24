@@ -1,0 +1,23 @@
+{
+	"rules": {
+		"no-var-keyword": true,
+		"quotemark": [
+			true,
+			"single",
+			"jsx-double"
+		],
+		"prefer-const": true,
+		"semicolon": [
+			true,
+			"never"
+		],
+		"trailing-comma": [
+			true,
+			{
+				"multiline": "always",
+				"singleline": "never"
+			}
+		],
+		"no-return-await": true
+	}
+}
