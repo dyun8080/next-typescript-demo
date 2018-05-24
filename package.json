@@ -28,6 +28,7 @@
     "babel-plugin-import": "^1.7.0",
     "cross-env": "^5.1.6",
     "less": "^3.0.4",
+    "less-vars-to-js": "^1.2.1",
     "nodemon": "^1.12.1",
     "ts-node": "^4.1.0",
     "tslint": "^5.10.0",

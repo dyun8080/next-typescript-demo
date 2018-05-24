@@ -1,12 +1,12 @@
 import React from 'react'
 import { AppContainer } from '../components'
-import styles from '../style2.less'
+import { Button } from 'antd'
 
 export default () =>
 	<AppContainer>
-		<div className={styles.hello}>
+		<div>
 			sdfsjhdfkshdj11sd11hfk
-			<button onClick={() => { console.log(123) }}>按钮</button>
+			<Button onClick={() => { console.log(123) }}>按钮</Button>
 		</div>
 	</AppContainer>
 

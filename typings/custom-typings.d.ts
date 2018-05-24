@@ -3,6 +3,11 @@ declare module '*.less' {
 	export = content;
 }
 
+declare module '*.css' {
+	const content: {[className: string]: string};
+	export = content;
+}
+
 declare module 'numeral';
 
 declare module 'rc-form';
