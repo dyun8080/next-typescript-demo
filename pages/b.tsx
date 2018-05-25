@@ -1,5 +1,6 @@
 import React from 'react'
 import { AppContainer } from '../components'
+import { Alert } from 'antd'
 
 export default () =>
 	<AppContainer>
@@ -13,10 +14,18 @@ export default () =>
 				transition: 100ms ease-in background;
       }
       .hello:hover {
-        background: #ccc;
+				background: #ccc;
 			}
     `}</style>
 
 			<p>Hello World</p>
 		</div>
+
+		<Alert
+			style={{ marginTop: 50 }}
+			message="Success Tips"
+			description="Detailed description and advices about successful copywriting."
+			type="success"
+			showIcon
+		/>
 	</AppContainer>

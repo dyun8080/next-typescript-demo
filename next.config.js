@@ -20,7 +20,7 @@ module.exports = withTypescript({
 		cssModules: false,
 		lessLoaderOptions: {
 			javascriptEnabled: true,
-			modifyVars
+			modifyVars,
 		},
 		webpack: function (config, { dev, isServer }) {
 			config.node = {
