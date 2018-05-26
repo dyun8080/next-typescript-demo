@@ -10,7 +10,6 @@ app.prepare()
     .then(() => {
     const server = express();
     server.get('/a', (req, res) => {
-        console.log(123231);
         return app.render(req, res, '/a', req.query);
     });
     server.get('*', (req, res) => {

@@ -7,12 +7,12 @@ const lessToJs = require('less-vars-to-js')
 
 const { ANALYZE } = process.env
 
-const modifyVars = lessToJs(fs.readFileSync(path.join(__dirname, './theme.less'), 'utf8'))
+const modifyVars = lessToJs(fs.readFileSync(path.join(__dirname, './theme/antd.less'), 'utf8'))
 
 
 // fix: prevents error when .less files are required by node
 if (typeof require !== 'undefined') {
-  require.extensions['.less'] = (file) => {}
+	require.extensions['.less'] = (file) => { }
 }
 
 module.exports = withTypescript({
@@ -22,7 +22,7 @@ module.exports = withTypescript({
 			javascriptEnabled: true,
 			modifyVars,
 		},
-		webpack: function (config, { dev, isServer }) {
+		webpack: (config, { dev, isServer }) => {
 			config.node = {
 				fs: 'empty'
 			}

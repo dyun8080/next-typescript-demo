@@ -10,6 +10,14 @@
 				"libraryDirectory": "lib",
 				"style": true
 			}
+		],
+		[
+			"styled-components",
+			{
+				"ssr": false,
+				"displayName": true,
+				"preprocess": false
+			}
 		]
 	]
 }

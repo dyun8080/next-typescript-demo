@@ -1,23 +1,58 @@
 import React from 'react'
 import Link from 'next/link'
 import { AppContainer } from '../components'
-import { Timeline } from 'antd'
+import { Timeline, Button } from 'antd'
 import '../style.less'
 
+import styled from '../theme'
+
+interface SectionProps {
+	// see https://github.com/Microsoft/TypeScript/issues/8588
+	children?: React.ReactChild
+	className?: string
+	color?: string
+}
+
+class Damao extends React.Component<SectionProps, {}> {
+	render() {
+		return (
+			<div className={this.props.className}>
+				{this.props.children}
+				<div>div</div>
+				<p>pppppp</p>
+			</div>
+		)
+	}
+}
+
+const StyledDamao = styled(Damao) `
+	color: red;
+	div {
+		color: ${props => props.color ? props.color : props.theme.primaryColor};
+	}
+	p {
+		color: ${props => props.theme.primaryColor};
+		font-size: 32px;
+	}
+`
+
+
 export default class Index extends React.Component<any, any> {
+	state = {
+		color: '',
+	}
+
 	render() {
 		const { name } = this.props
 		return (
 			<AppContainer>
-				<style jsx>{`
-
-					.damao {
-
-				}
-				`}</style>
-
 				<h1>Home Page</h1>
 				<p>Welcome, {name}</p>
+
+				<StyledDamao color={this.state.color}>大毛</StyledDamao>
+
+				<Button onClick={() => { this.setState({ color: 'green' }) }}>onChange data color</Button>
+
 				<div className="example">Hello World, I am being styled using CSS Modules!</div>
 				<ul>
 					<li><Link href="/a" as="/a"><a>a</a></Link></li>

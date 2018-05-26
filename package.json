@@ -15,6 +15,7 @@
     "nprogress": "^0.2.0",
     "react": "16.4.0",
     "react-dom": "16.4.0",
+    "styled-components": "^3.3.0",
     "styled-jsx": "^2.2.6",
     "typescript": "^2.7.1"
   },
@@ -26,6 +27,7 @@
     "@types/styled-jsx": "^2.2.3",
     "@zeit/next-less": "^0.3.0",
     "babel-plugin-import": "^1.7.0",
+    "babel-plugin-styled-components": "^1.5.1",
     "cross-env": "^5.1.6",
     "less": "^3.0.4",
     "less-vars-to-js": "^1.2.1",
