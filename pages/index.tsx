@@ -18,7 +18,11 @@ class Damao extends React.Component<SectionProps, {}> {
 			<div className={this.props.className}>
 				{this.props.children}
 				<div>div</div>
-				<p>pppppp</p>
+
+				<section>
+					pppppp
+				<div>12313123</div>
+				</section>
 			</div>
 		)
 	}
@@ -26,7 +30,7 @@ class Damao extends React.Component<SectionProps, {}> {
 
 const StyledDamao = styled(Damao) `
 	color: red;
-	div {
+	> div {
 		color: ${props => props.color ? props.color : props.theme.primaryColor};
 	}
 	p {

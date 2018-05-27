@@ -26,6 +26,8 @@ declare module 'react-plyr';
 
 declare module 'react-lines-ellipsis';
 
+declare module '@antv/g6';
+
 // declare module '*';
 
 // declaration.d.ts

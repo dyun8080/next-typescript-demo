@@ -13,6 +13,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
+					{/* 这种方式会在最下面添加标签 */}
           {this.props.styleTags}
         </Head>
         <body>
