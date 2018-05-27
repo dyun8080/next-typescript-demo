@@ -3,30 +3,8 @@ declare module '*.less' {
 	export = content;
 }
 
-declare module '*.css' {
-	const content: {[className: string]: string};
-	export = content;
-}
+declare module 'react-syntax-highlighter/*';
 
-declare module 'numeral';
-
-declare module 'rc-form';
-
-declare module 'classnames';
-
-declare module 'rc-rate';
-
-declare module 'react-infinite-scroller';
-
-declare module 'reqwest';
-
-declare module 'qs';
-
-declare module 'react-plyr';
-
-declare module 'react-lines-ellipsis';
-
-declare module '@antv/g6';
 
 // declare module '*';
 

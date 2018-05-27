@@ -1,7 +1,6 @@
-import React from 'react'
+const codeString = `import React from 'react'
 import { AppContainer, Code, Layout } from '@/components'
 import { Timeline } from 'antd'
-import { codeString } from './code'
 
 const { Content } = Layout
 
@@ -16,7 +15,7 @@ export default class extends React.Component {
 				<Content>
 					<h1>Next 入坑杂谈——写给与我一样的萌新们</h1>
 					<p className="text-color">真是没想到，第一篇技术文章会发布在我的个人博客里~</p>
-					<Code codeString={codeString} />
+					<Code codeString={this.props.query} />
 					<Timeline>
 						<Timeline.Item>
 							<p>2018-05-22</p>
@@ -50,6 +49,6 @@ export default class extends React.Component {
 			</AppContainer>
 		)
 	}
-}
+}`
 
-
+export { codeString }

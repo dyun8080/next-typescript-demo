@@ -1,14 +1,10 @@
 import * as express from 'express'
 import * as next from 'next'
-import * as fs from 'fs'
-import * as path from 'path'
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
-
-
 
 app.prepare()
 	.then(() => {
@@ -18,15 +14,7 @@ app.prepare()
 			return app.render(req, res, '/a', req.query)
 		})
 
-		server.get('/about', (req, res) => {
-			const data = fs.readFileSync(path.join(__dirname, '../pages/about/index.tsx'), 'utf-8') as any
-			console.log('about')
-			return app.render(req, res, '/about', data)
-		})
-
 		server.get('*', (req, res) => {
-			console.log(req.path)
-
 			return handle(req, res)
 		})
 

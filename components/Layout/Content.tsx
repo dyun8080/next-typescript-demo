@@ -21,5 +21,4 @@ const App = styled(Content)`
 	}
 `
 
-
 export default App

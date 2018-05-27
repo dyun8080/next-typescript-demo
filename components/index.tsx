@@ -1,4 +1,9 @@
 import AppContainer from './AppContainer'
-import Modal from './Modal'
+import Code from './Code'
+import Layout from './Layout'
 
-export { AppContainer, Modal }
+export {
+	AppContainer,
+	Code,
+	Layout,
+}
