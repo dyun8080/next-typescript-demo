@@ -3,7 +3,7 @@ import NextHead from 'next/head'
 import NProgress from 'nprogress'
 import Router, { withRouter, SingletonRouter } from 'next/router'
 
-import './style.less'
+import '@/theme/classes.less'
 
 Router.onRouteChangeStart = (url) => {
 	console.log(`Loading: ${url}`)
@@ -21,7 +21,7 @@ interface AppContainerProps {
 
 const AppContainer = (props: AppContainerProps) => {
 	return (
-		<div style={{ margin: 20 }}>
+		<div style={{ padding: 20 }}>
 			<NextHead>
 				<title>{props.title}(#^.^#)</title>
 				<meta charSet="utf-8" />
