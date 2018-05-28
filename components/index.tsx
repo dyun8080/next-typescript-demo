@@ -1,9 +1,9 @@
 import AppContainer from './AppContainer'
-import Code from './Code'
+import CodeBlock from './CodeBlock'
 import Layout from './Layout'
 
 export {
 	AppContainer,
-	Code,
+	CodeBlock,
 	Layout,
 }

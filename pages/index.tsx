@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { AppContainer } from '../components'
-import { Timeline, Button } from 'antd'
+import { Timeline } from 'antd'
 
 
 export default class Index extends React.Component<any, any> {

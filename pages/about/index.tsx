@@ -1,22 +1,18 @@
 import React from 'react'
-import { AppContainer, Code, Layout } from '@/components'
+import { AppContainer, CodeBlock, Layout } from '@/components'
 import { Timeline } from 'antd'
 import { codeString } from './code'
 
 const { Content } = Layout
 
 export default class extends React.Component {
-	static getInitialProps(ctx) {
-		return { query: typeof ctx.query === 'string' ? ctx.query : ' ' }
-	}
-
 	render() {
 		return (
 			<AppContainer title="嘻嘻">
 				<Content>
 					<h1>Next 入坑杂谈——写给与我一样的萌新们</h1>
 					<p className="text-color">真是没想到，第一篇技术文章会发布在我的个人博客里~</p>
-					<Code codeString={codeString} />
+					<CodeBlock codeString={codeString} />
 					<Timeline>
 						<Timeline.Item>
 							<p>2018-05-22</p>

@@ -5,7 +5,7 @@ import prism from 'react-syntax-highlighter/styles/prism/atom-dark'
 
 registerLanguage('jsx', jsx)
 
-const CodeHighlighter = ({ codeString }) => {
+const CodeBlock = ({ codeString }) => {
 	return (
 		<SyntaxHighlighter
 			codeTagProps={{ style: { tabSize: 2 } }}
@@ -16,4 +16,4 @@ const CodeHighlighter = ({ codeString }) => {
 	)
 }
 
-export default CodeHighlighter
+export default CodeBlock
