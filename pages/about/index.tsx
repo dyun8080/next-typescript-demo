@@ -8,7 +8,7 @@ const { Content } = Layout
 export default class extends React.Component {
 	render() {
 		return (
-			<AppContainer title="嘻嘻">
+			<AppContainer title="Next">
 				<Content>
 					<h1>Next 入坑杂谈——写给与我一样的萌新们</h1>
 					<p className="text-color">真是没想到，第一篇技术文章会发布在我的个人博客里~</p>
