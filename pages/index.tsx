@@ -19,6 +19,7 @@ export default class Index extends React.Component<any, any> {
 				<div className="example">Hello World, I am being styled using CSS Modules!</div>
 				<ul>
 					<li><Link href="/about" as="/about"><a>第一个同构项目</a></Link></li>
+					<li><Link href="/code" as="/code"><a>一些面试题</a></Link></li>
 					<li><Link href="/a" as="/a"><a>a</a></Link></li>
 					<li><Link href="/b" as="/b"><a>b</a></Link></li>
 				</ul>
