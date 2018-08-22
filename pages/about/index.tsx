@@ -20,7 +20,7 @@ export default class extends React.Component {
 								作为已经精通这React技术体系，并且有长达两年的后台应用开发经验的你来说，独立从零开始搭建同构应用，是否会有压力呢？
 							</p>
 							<div style={{ textAlign: 'center' }}>
-								<img style={{ marginBottom: 10 }} src="/static/xiaomao.jpg" alt="xiaomao" />
+								<img style={{ marginBottom: 10 }} src="/static/images/xiaomao.jpg" alt="xiaomao" />
 								<p>必胜</p>
 							</div>
 							<div>

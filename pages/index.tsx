@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { AppContainer } from '../components'
 import { Timeline } from 'antd'
 
-
 export default class Index extends React.Component<any, any> {
 	state = {
 		color: '',
@@ -23,7 +22,9 @@ export default class Index extends React.Component<any, any> {
 					<li><Link href="/a" as="/a"><a>a</a></Link></li>
 					<li><Link href="/b" as="/b"><a>b</a></Link></li>
 				</ul>
-
+				<div style={{ fontSize: 0, marginBottom: 20 }}>
+					<img src="/static/images/img01.jpg" alt="" />
+				</div>
 				<Timeline>
 					<Timeline.Item color="green">Create a services site 2015-09-01</Timeline.Item>
 					<Timeline.Item color="green">Create a services site 2015-09-01</Timeline.Item>

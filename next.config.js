@@ -1,3 +1,5 @@
+'use strict'
+
 const fs = require('fs')
 const path = require('path')
 const withTypescript = require('@zeit/next-typescript')
@@ -34,7 +36,6 @@ module.exports = withTypescript({
 					openAnalyzer: true
 				}))
 			}
-			// console.log(config.module.rules)
 
 			return config
 		}

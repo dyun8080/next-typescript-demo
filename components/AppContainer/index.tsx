@@ -1,8 +1,7 @@
 import React from 'react'
 import NextHead from 'next/head'
 import NProgress from 'nprogress'
-import Router, { withRouter, SingletonRouter } from 'next/router'
-
+import Router, { withRouter } from 'next/router'
 import '@/theme/classes.less'
 
 Router.onRouteChangeStart = (url) => {
@@ -14,7 +13,7 @@ Router.onRouteChangeComplete = () => NProgress.done()
 Router.onRouteChangeError = () => NProgress.done()
 
 interface AppContainerProps {
-	router: SingletonRouter
+	// router: SingletonRouter
 	children?: React.ReactNode
 	title?: string
 }
@@ -32,7 +31,7 @@ const AppContainer = (props: AppContainerProps) => {
 				<link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />
 				<link rel="icon" href="/static/favicon.ico" />
 				{/* Import CSS for nprogress */}
-				<link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
+				<link rel="stylesheet" type="text/css" href="/static/css/nprogress.css" />
 				<link rel="stylesheet" href="/_next/static/style.css" />
 
 				{/* <meta property="og:url" content={props.url || defaultOGURL} />

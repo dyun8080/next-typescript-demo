@@ -5,8 +5,6 @@ declare module '*.less' {
 
 declare module 'react-syntax-highlighter/*';
 
+declare module 'next/router'
 
 // declare module '*';
-
-// declaration.d.ts
-// declare module '*.less';
