@@ -5,6 +5,8 @@ declare module '*.less' {
 
 declare module 'react-syntax-highlighter/*';
 
-declare module 'next/router'
+declare module 'next/router';
+
+declare module 'koa-connect';
 
 // declare module '*';
