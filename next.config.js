@@ -7,15 +7,15 @@
 
 'use strict'
 
-const fs 											 = require('fs')
-const path 										 = require('path')
-const lessToJs 								 = require('less-vars-to-js')
-const withLESS 								 = require('@zeit/next-less')
-const withTypescript           = require('@zeit/next-typescript')
+const fs = require('fs')
+const path = require('path')
+const lessToJs = require('less-vars-to-js')
+const withLESS = require('@zeit/next-less')
+const withTypescript = require('@zeit/next-typescript')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
-const { ANALYZE } 				     = process.env
-const modifyVars 							 = lessToJs(fs.readFileSync(path.join(__dirname, './theme/antd.less'), 'utf8'))
+const { ANALYZE } = process.env
+const modifyVars = lessToJs(fs.readFileSync(path.join(__dirname, './theme/antd.less'), 'utf8'))
 
 // fabric.
 
