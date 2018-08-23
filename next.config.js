@@ -1,16 +1,23 @@
+/**
+ * @see https://github.com/zeit/next.js/tree/canary/examples/with-webpack-bundle-analyzer
+ * @see https://github.com/zeit/next.js/tree/canary/examples/with-ant-design-less
+ * @see https://github.com/zeit/next.js/tree/canary/examples/with-typescript
+ * @see https://github.com/zeit/next.js/tree/canary/examples/with-styled-components
+ */
+
 'use strict'
 
-const fs = require('fs')
-const path = require('path')
-const withTypescript = require('@zeit/next-typescript')
+const fs 											 = require('fs')
+const path 										 = require('path')
+const lessToJs 								 = require('less-vars-to-js')
+const withLESS 								 = require('@zeit/next-less')
+const withTypescript           = require('@zeit/next-typescript')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-const withLESS = require('@zeit/next-less')
-const lessToJs = require('less-vars-to-js')
 
-const { ANALYZE } = process.env
+const { ANALYZE } 				     = process.env
+const modifyVars 							 = lessToJs(fs.readFileSync(path.join(__dirname, './theme/antd.less'), 'utf8'))
 
-const modifyVars = lessToJs(fs.readFileSync(path.join(__dirname, './theme/antd.less'), 'utf8'))
-
+// fabric.
 
 // fix: prevents error when .less files are required by node
 if (typeof require !== 'undefined') {
