@@ -10,6 +10,7 @@
 /build
 /dist
 /.next
+/production-server
 
 # misc
 .DS_Store
