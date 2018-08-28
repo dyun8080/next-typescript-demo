@@ -1,16 +1,30 @@
 import React from 'react'
 import Link from 'next/link'
 import { AppContainer } from '../components'
-import { Timeline, Card } from 'antd'
+import { Timeline, Card, Button } from 'antd'
+import { get } from '@/utils/request'
 
 const { Meta } = Card
 
 export default class Index extends React.Component<any, any> {
+	static async getInitialProps() {
+		const data = await get('https://api.github.com/repos/zeit/next.js')
+		// console.log(data)
+		return { data }
+	}
+
+	// async componentDidMount() {
+	// 	const data = await get('http://api.douban.com/v2/movie/top250')
+	// 	console.log(data)
+	// }
+
 	render() {
 		return (
 			<AppContainer>
 				<h1>Welcome</h1>
 				<p>Hello, World</p>
+				<p>start: {this.props.data.stargazers_count}</p>
+				<Button type="primary">按钮</Button>
 
 				<div className="example">Hello World, I am being styled using CSS Modules!</div>
 				<ul>
@@ -21,7 +35,7 @@ export default class Index extends React.Component<any, any> {
 				</ul>
 				<Timeline>
 					<Timeline.Item color="green">
-						2018-08-23
+						Create a services site 2015-09-01
 						<Card
 							hoverable
 							bodyStyle={{ padding: 10 }}

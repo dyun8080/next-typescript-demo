@@ -24,7 +24,7 @@ const AppContainer = (props: AppContainerProps) => {
 			<NextHead>
 				<title>{props.title}(#^.^#)</title>
 				<meta charSet="utf-8" />
-				{/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
 				<link rel="icon" sizes="192x192" href="/static/touch-icon.png" />
 				<link rel="apple-touch-icon" href="/static/touch-icon.png" />
