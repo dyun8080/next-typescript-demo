@@ -7,16 +7,23 @@ import { get } from '@/utils/request'
 const { Meta } = Card
 
 export default class Index extends React.Component<any, any> {
+	constructor(props) {
+		super(props)
+		console.log('constructor')
+	}
+
+	// 第一次加载页面的时候会在服务端执行，Link 标签跳转的时候则会在 constructor 之前执行
 	static async getInitialProps() {
+		// 所以说，这种请求方式会出现跨域的问题
 		const data = await get('https://api.github.com/repos/zeit/next.js')
-		// console.log(data)
+		console.log('getInitialProps')
 		return { data }
 	}
 
-	// async componentDidMount() {
-	// 	const data = await get('http://api.douban.com/v2/movie/top250')
-	// 	console.log(data)
-	// }
+	async componentDidMount() {
+		console.log('componentDidMount')
+
+	}
 
 	render() {
 		return (
